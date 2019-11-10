@@ -70,7 +70,6 @@ C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\bin\System.We
 C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\bin\Newtonsoft.Json.xml
 C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
 C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbprojAssemblyReference.cache
 C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Resources.resources
 C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbproj.GenerateResource.cache
 C:\Users\amol.bhawari\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbproj.CopyComplete
