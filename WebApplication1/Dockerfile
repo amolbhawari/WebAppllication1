@@ -1,11 +1,16 @@
-FROM microsoft/aspnetcore-build:2.0.0 AS build
-WORKDIR /code
-COPY . .
-RUN dotnet restore -p:RestoreUseSkipNonexistentTargets=false -nowarn:msb3202,nu1503
-
-RUN dotnet publish --output /output --configuration Release
-
-FROM microsoft/aspnetcore:latest
-COPY --from=build /output /app
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+WORKDIR /app
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet","WebApplication1.dll"]
